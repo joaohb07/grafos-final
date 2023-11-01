@@ -4,9 +4,13 @@
 ## Como Rodar local
 
 Tenha a versão 3.9.10 do python instalada local e siga os seguintes passos:
+
     - Crie um ambiente virtual python `python3 -m venv grafos` grafos é o nome do ambiente, de preferência crie fora da pasta do repositório para evitar conflitos;
+
     - Ative o ambiente virtual, Windows: `grafos\Scripts\activate`, MacOS Linux: `source venv/bin/activate`;
+
     - Instale os requerimentos, `python3 -m pip install -r requirements.txt`;
+
     - `python3 main.py` para rodar local.
 
 ## Resumo do Projeto
@@ -15,8 +19,11 @@ Este projeto propõe abordar o desafio da otimização das redes de sensores sem
 A proposta envolve uma rede de sensores sem fio distribuídos geograficamente, cada um dos quais deve ser conectado à estação central por meio de cabos. A questão fundamental é encontrar a configuração de conexões que minimizem o comprimento total dos cabos, reduzindo assim custos e impactos ambientais.
 
 Este problema pode ser formalizado como a busca da Minimum Spanning Tree (MST) em um grafo, onde:
+
     - Cada sensor é representado como um nó no grafo.
+
     - As distâncias entre sensores adjacentes representam o custo (comprimento do cabo) da conexão.
+    
     - O objetivo é encontrar uma árvore que conecte todos os sensores à estação central de forma que o custo total seja minimizado.
 
 A solução para este problema tem aplicações práticas em várias áreas, como a economia de recursos em infraestruturas de redes, a minimização da pegada de carbono e a otimização de redes de sensores sem fio em áreas remotas.

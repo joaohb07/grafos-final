@@ -1,0 +1,22 @@
+Node,Type,X,Y
+Central,Network Central,10,10
+Sensor1,Sensor,3,4
+Sensor2,Sensor,5,1
+Sensor3,Sensor,1,2
+Sensor4,Sensor,6,6
+Sensor5,Sensor,2,5
+Sensor6,Sensor,7,3
+Sensor7,Sensor,4,7
+Sensor8,Sensor,8,9
+Sensor9,Sensor,3,7
+Sensor10,Sensor,9,2
+Sensor11,Sensor,5,9
+Sensor12,Sensor,10,7
+Sensor13,Sensor,2,8
+Sensor14,Sensor,8,4
+Sensor15,Sensor,7,8
+Sensor16,Sensor,9,5
+Sensor17,Sensor,4,3
+Sensor18,Sensor,6,1
+Sensor19,Sensor,1,5
+Sensor20,Sensor,7,6

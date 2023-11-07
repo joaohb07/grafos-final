@@ -21,11 +21,6 @@ class Helpers:
         for sensor in graph.nodes:
             plt.scatter(sensor.x, sensor.y, label=sensor.node)
 
-        for edge in graph.edges:
-            x1, y1 = edge[0].x, edge[0].y
-            x2, y2 = edge[1].x, edge[1].y
-            plt.plot([x1, x2], [y1, y2], 'k-', lw=0.5)
-
         for edge in mst:
             x1, y1 = edge[0].x, edge[0].y
             x2, y2 = edge[1].x, edge[1].y

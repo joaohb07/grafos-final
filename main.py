@@ -7,7 +7,7 @@ from helpers.Helpers import Helpers
 def main():
     graph = Graph()
 
-    with open('sensores45.csv', 'r') as csv_file:
+    with open('./data/sensores45.csv', 'r') as csv_file:
         csv_reader = csv.reader(csv_file)
         next(csv_reader)  # Skip header
 

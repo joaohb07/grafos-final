@@ -13,6 +13,12 @@ Tenha a versão 3.9.10 do python instalada local e siga os seguintes passos:
 
 - `python3 main.py` para rodar local.
 
+## Como Rodar Testes Locais
+
+Para rodar os testes unitários locais, siga o seguinte passo:
+
+- Com o ambiente virtual ativado, rode `python3 -m pytest`
+
 ## Resumo do Projeto
 
 Este projeto propõe abordar o desafio da otimização das redes de sensores sem fio, com o objetivo de encontrar a Minimum Spanning Tree (MST) que conecta todos os sensores à estação central de forma eficiente. Este problema desempenha um papel fundamental na construção de infraestruturas de rede eficazes.

@@ -29,3 +29,19 @@ class Helpers:
         plt.legend(loc="upper left", bbox_to_anchor=(1, 1), borderaxespad=0)
         plt.title(title)
         plt.show()
+
+    def print_mst_step_by_step(node1, node2, distance, total_cost):
+        print("Adicionando Nó: {} - {}, ".format(node1.node, node2.node),
+              end='')
+        print("Distância: {:.2f}, ".format(distance), end='')
+        print("Custo Total: {:.2f}".format(total_cost))
+
+    def print_final_mst(algorithm, mst, cost):
+        print(f"\nMST Final {algorithm} e Grafo:")
+        for edge in mst:
+            print("Aresta: {} - {}, Distancia: {:.2f}".format(
+                edge[0].node,
+                edge[1].node,
+                edge[2]
+            ))
+        print(f"\nCusto Total ({algorithm}): {cost:.2f}\n")

@@ -1,4 +1,5 @@
 import math
+from helpers.Helpers import Helpers
 
 
 class Graph:
@@ -10,12 +11,16 @@ class Graph:
         self.nodes.append(sensor)
 
     def calculate_distance(self, sensor1, sensor2):
-        return math.sqrt((sensor1.x - sensor2.x) ** 2 + (sensor1.y - sensor2.y) ** 2)
+        return math.sqrt(
+            (sensor1.x - sensor2.x) ** 2 + (sensor1.y - sensor2.y) ** 2
+        )
 
     def build_graph(self):
         for i in range(len(self.nodes)):
             for j in range(i + 1, len(self.nodes)):
-                distance = self.calculate_distance(self.nodes[i], self.nodes[j])
+                distance = self.calculate_distance(
+                    self.nodes[i], self.nodes[j]
+                )
                 self.edges.append((self.nodes[i], self.nodes[j], distance))
 
     def kruskal(self):
@@ -40,7 +45,12 @@ class Graph:
                         parent[node.node] = new_parent
 
                 # Print the step-by-step process
-                print(f"Adicionando Nó: {node1.node} - {node2.node}, Distância: {distance:.2f}, Custo Total: {total_cost:.2f}")
+                Helpers.print_mst_step_by_step(
+                    node1,
+                    node2,
+                    distance,
+                    total_cost
+                )
 
         return mst, total_cost
 
@@ -57,7 +67,10 @@ class Graph:
             nearest_edge = None
             for node in visited_nodes:
                 for edge in self.edges:
-                    if node in edge[:2] and (edge[0] in unvisited_nodes or edge[1] in unvisited_nodes):
+                    if node in edge[:2] and (
+                        edge[0] in unvisited_nodes
+                        or edge[1] in unvisited_nodes
+                    ):
                         if nearest_edge is None or edge[2] < nearest_edge[2]:
                             nearest_edge = edge
 
@@ -73,8 +86,12 @@ class Graph:
                 visited_nodes.add(nearest_edge[1])
 
                 # Print the step-by-step process
-                print("Adicionando Nó: {} - {}, Distância: {:.2f}, Custo Total: {:.2f}".format(nearest_edge[0].node, nearest_edge[1].node, nearest_edge[2], total_cost))
-
+                Helpers.print_mst_step_by_step(
+                    nearest_edge[0],
+                    nearest_edge[1],
+                    nearest_edge[2],
+                    total_cost
+                )
             else:
                 break
 
